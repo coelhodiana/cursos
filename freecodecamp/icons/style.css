@@ -1,0 +1,26 @@
+#teste {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+#icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(189, 189, 189);
+    width: 50px;
+    height: 50px;
+    margin: 0px 10px 200px 10px;
+    border-radius: 100%;
+}
+
+#icons:hover {
+    background-color: rgb(87, 250, 96);
+}
+
+#icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

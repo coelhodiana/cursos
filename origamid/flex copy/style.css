@@ -1,0 +1,108 @@
+body, ul, li, p {
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+    font-size: 1.2rem;
+    font-family: Arial;
+    /* margin-bottom: 100px; */
+}
+
+body {
+    margin-bottom: 100px;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 100px;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+.header { 
+    background: rgb(43, 45, 46);
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.menu {
+    display: flex;
+
+}
+
+.menu li {
+    margin-left: 10px;
+}
+
+.menu li a {
+    display: block;
+    padding: 10px;
+}
+
+/* CSS Flexbox */
+
+.flex {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.flex > div {
+    flex: 1 1 200px;
+    margin: 10px;
+    box-shadow: 1px 2px 14px rgba(97, 92, 64, 0.2);
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.box {
+    height: 200px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+p {
+    padding: 10px;
+}
+
+/* FLEX GRID */
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-areas:
+    "img img img"
+    "advert content content"
+    "advert content content"
+    "advert content content";
+    max-width: 780px;
+    margin: 0 auto;
+    grid-gap: 20px;
+}
+
+.grid < div:nth-child(n + 5) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 10px;
+    align-items: center;
+    
+}
+
+.anuncio {
+    grid-area: advert;
+    grid-row-end: 5;
+    grid-row-start: 2;
+}

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CSS grid</title>
+    
+    <style>
+        body {
+            font: normal 10pt Arial;
+            color: white;
+        }
+
+        .item1{background:LightSkyBlue;}
+        .item2{background:LightSalmon;}
+        .item3{background:PaleTurquoise;}
+        .item4{
+            background:LightPink;
+            border-radius: 8px;
+            }
+        .item5{
+            background:PaleGreen;
+            border-radius: 8px;
+        }
+        .item6{
+            border-radius: 8px;
+            background:lightcoral;
+            grid-area: 3/1/4/4;
+            }
+        
+        .container {
+            border-radius: 8px;
+            font-size: 40px;
+            min-height: 300px;
+            width: 100%;
+            background: LightGray;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr));
+            grid-template-rows: repeat(3, 1fr);
+            grid-gap: 20px;
+            /* align-items: center; */
+            grid-area:
+            "header header header",
+            "contant contant contant",
+            "footer footer footer"
+        }
+      </style>
+</head>
+<body>
+        
+      <div class="container">
+        <div class="item1">1</div>
+        <div class="item2">2</div>
+        <div class="item3">3</div>
+        <div class="item4">4</div>
+        <div class="item5">5</div>
+        <div class="item6">6</div>
+      </div>
+</body>
+</html>

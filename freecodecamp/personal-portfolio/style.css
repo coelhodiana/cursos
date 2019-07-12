@@ -1,0 +1,50 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    max-width: 1200px;
+    margin: auto;
+}
+
+#projects {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 20px;
+
+}
+
+#project-tile {
+    background-color: bisque;
+    height: 100px;
+}
+
+#welcome-section {
+    background-size: cover;
+    height: 100vh;
+    background-color: blueviolet;
+}
+
+#teste {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+#icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(189, 189, 189);
+    width: 52px;
+    height: 52px;
+    margin: 0px 10px 200px 10px;
+    border-radius: 100%;
+}
+
+#icons:hover {
+    background-color: rgb(99, 182, 51);
+}
+
+#icon {
+    font-size: 26px;
+    color: white;
+    margin: 0 auto;
+}
