@@ -1,0 +1,138 @@
+:root {
+    --main-font: 'Roboto Mono', monospace;
+    --second-font: 'Roboto', sans-serif;
+    --keycolor: rgba(255, 255, 255, 0.774);
+    --text-color: rgb(12, 12, 12);
+  }
+  
+
+body, ul, li, p {
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+    font-size: 1.2rem;
+    font-family: var(--main-font);
+}
+
+body {
+    margin-bottom: 100px;
+}
+
+h1 {
+    text-align: center;
+    margin: 0 0 20px 0;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+a {
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+/* HEADER */
+
+.header {
+    margin: 0 auto;
+}
+
+.menu { 
+    background: var(--keycolor);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    height: 100px;
+    max-width: 1220px;
+    margin: 0 auto;
+}
+
+.logo {
+    display: flex;
+    align-items: flex-end;
+    font-weight: bold;
+}
+
+.links {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.social {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+.logo li a {
+    padding: 10px;
+}
+
+.links li a{
+    font-size: 1rem;
+    padding: 20px;
+}
+
+.social li a {
+    padding: 10px;
+}
+
+/* ABOUT SECTION */
+
+.about {
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    text-align: center;
+}
+
+/* CSS GRID PROJECTS */
+
+.projects {
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 12px;
+    max-width: 1200px;
+}
+
+.card {
+    box-shadow: 1px 2px 14px rgba(97, 92, 64, 0.4);
+    border-radius: 12px;
+    overflow: hidden;
+    display: grid;
+    grid-template-rows: 440px 60px;
+    grid-template-areas: 'imagem,
+                        legenda';
+}
+
+.card img {
+    grid-area: imagem;
+    object-fit: cover;
+    height: 500px;
+    width: auto;
+    transition: height 800ms ease-in-out;
+    grid-row: 1/3;
+    
+}
+
+.card img:hover {
+    height: 520px;
+}
+
+
+.projects .card p {
+    color: var(--text-color);
+    background-color: var(--keycolor);
+    grid-area: legenda;
+    grid-row: 2/3;
+    padding: 0px 20px;;
+    display: flex;
+    align-items: center;
+    z-index: 1;
+}
+

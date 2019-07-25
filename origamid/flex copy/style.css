@@ -1,19 +1,20 @@
+:root {
+    --main-font: 'Source Serif Pro', serif;
+    --keycolor: rgba(32, 32, 32, 0.774);
+    --text-color: white;
+  }
+  
+
 body, ul, li, p {
     margin: 0px;
     padding: 0px;
     list-style: none;
     font-size: 1.2rem;
-    font-family: Arial;
-    /* margin-bottom: 100px; */
+    font-family: var(--main-font);
 }
 
 body {
     margin-bottom: 100px;
-}
-
-a {
-    text-decoration: none;
-    color: white;
 }
 
 h1 {
@@ -26,8 +27,13 @@ img {
     display: block;
 }
 
+a {
+    text-decoration: none;
+    color: var(--text-color);
+}
+
 .header { 
-    background: rgb(43, 45, 46);
+    background: var(--keycolor);
     display: flex;
     justify-content: space-between;
     padding: 20px;
@@ -49,60 +55,115 @@ img {
     padding: 10px;
 }
 
-/* CSS Flexbox */
+/* CSS GRID */
 
 .flex {
-    display: flex;
-    flex-wrap: wrap;
-    max-width: 800px;
-    margin: 0 auto;
+    margin: 0 10%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-gap: 12px;
+    max-width: 1200px;
 }
 
-.flex > div {
-    flex: 1 1 200px;
-    margin: 10px;
-    box-shadow: 1px 2px 14px rgba(97, 92, 64, 0.2);
+.card {
+    box-shadow: 1px 2px 14px rgba(97, 92, 64, 0.4);
     border-radius: 12px;
     overflow: hidden;
-}
-
-.box {
-    height: 200px;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-p {
-    padding: 10px;
-}
-
-/* FLEX GRID */
-
-.grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: 1fr 1fr 1fr 1fr;
-    grid-template-areas:
-    "img img img"
-    "advert content content"
-    "advert content content"
-    "advert content content";
-    max-width: 780px;
-    margin: 0 auto;
-    grid-gap: 20px;
+    grid-template-rows: 440px 60px;
+    grid-template-areas: 'imagem,
+                        legenda';
 }
 
-.grid < div:nth-child(n + 5) {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-gap: 10px;
-    align-items: center;
+.card img {
+    grid-area: imagem;
+    object-fit: cover;
+    height: 500px;
+    width: auto;
+    transition: height 800ms ease-in-out;
+    grid-row: 1/3;
     
 }
 
-.anuncio {
-    grid-area: advert;
-    grid-row-end: 5;
-    grid-row-start: 2;
+.card img:hover {
+    height: 520px;
+}
+
+
+p {
+    color: var(--text-color);
+    background-color: var(--keycolor);
+    grid-area: legenda;
+    grid-row: 2/3;
+    padding: 0px 20px;;
+    display: flex;
+    align-items: center;
+    z-index: 1;
+}
+
+/* INFO'S SECTION */
+
+.grid-infos {
+    background-color: var(--keycolor);
+    margin: 50px 0 0 0;
+}
+
+.container {
+    max-width: 1200px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    padding: 5% 0;
+    margin: 0 10%;
+}
+
+.contacts {
+    color: var(--text-color);
+}
+
+.links {
+    color: var(--text-color);
+    display: flex; 
+}
+
+.links li {
+    background-color: var(--keycolor);
+    display: flex;
+    height: 40px;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    margin: 5px;
+    
+}
+
+.links a {
+    padding: 10px;
+}
+
+.newsletter {
+    color: var(--text-color);
+    display: grid;
+    grid-gap: 5px;
+}
+
+.newsletter #button {
+    background-color: var(--keycolor);
+    border: none;
+    color: var(--text-color);
+    cursor: pointer;
+    font-family: var(--main-font);
+    font-size: 1rem;
+    font-weight: bold;
+    height: 40px;
+}
+
+.newsletter #button:hover {
+
+}
+
+.newsletter #mail-box {
+    border: none;
+    font-family: var(--main-font);
+    padding-left: 10px;
+    height: 40px;
 }
